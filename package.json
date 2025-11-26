@@ -1,0 +1,22 @@
+{
+  "name": "portfoliobackend",
+  "version": "1.0.0",
+  "description": "Its the Backend of my Portfolio which will include reach me form and Hire me form backend",
+  "keywords": [
+    "Backend",
+    "Portfolio"
+  ],
+  "license": "ISC",
+  "author": "Charanjeet Singh Sidhu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0",
+    "nodemon": "^3.1.11"
+  }
+}
