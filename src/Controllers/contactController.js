@@ -1,9 +1,11 @@
 const Contact = require("../Models/Contact");
+const axios = require("axios");
+// const { sendEmail } = require("../utils/sendEmail");
+const contactEmailTemplate = require("../Functions/contactMeTemplate");
 
 exports.sendMessage = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
-
     // Validation
     if (!name || !email || !subject || !message) {
       return res.status(400).json({
@@ -18,6 +20,11 @@ exports.sendMessage = async (req, res) => {
       email,
       subject,
       message,
+    });
+    await axios.post("http://localhost:3000/api/email/send", {
+      to: email,
+      subject: `🙏 Thank You, ${name} for Reaching me Out!!`,
+      message: contactEmailTemplate({ name, email, subject, message }),
     });
 
     res.status(201).json({
