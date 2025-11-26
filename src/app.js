@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 app.use("/api/contact", require("./Routes/contactRoutes"));
 app.use("/api/project", require("./Routes/projectRoutes"));
+app.use("/api/email", require("./Routes/emailRoutes"));
 
 app.get("/", (req, res) => {
   res.send(`
