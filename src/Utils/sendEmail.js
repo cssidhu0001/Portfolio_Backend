@@ -7,7 +7,10 @@ async function sendEmail({ to, subject, message }) {
       to,
       subject,
       html: message,
+<<<<<<< HEAD
       replyTo: process.env.REPLY_TO,
+=======
+>>>>>>> bf9ee27afbaef83c2063cdf526704e9ecddf3147
     };
 
     const info = await transporter.sendMail(mailOptions);

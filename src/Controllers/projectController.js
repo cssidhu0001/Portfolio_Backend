@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 const HireMeEmailTemplate = require("../Functions/HireMeEmailTemplate");
 const ProjectRequest = require("../Models/ProjectRequest");
 const axios = require("axios");
+=======
+const ProjectRequest = require("../Models/ProjectRequest");
+
+>>>>>>> bf9ee27afbaef83c2063cdf526704e9ecddf3147
 exports.createProjectRequest = async (req, res) => {
   try {
     const {
