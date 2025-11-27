@@ -1,5 +1,6 @@
+const HireMeEmailTemplate = require("../Functions/HireMeEmailTemplate");
 const ProjectRequest = require("../Models/ProjectRequest");
-
+const axios = require("axios");
 exports.createProjectRequest = async (req, res) => {
   try {
     const {
@@ -37,6 +38,19 @@ exports.createProjectRequest = async (req, res) => {
       budget,
       description,
       location,
+    });
+    await axios.post("http://localhost:3000/api/email/send", {
+      to: email,
+      subject: `🙏 Thank You, ${fullName}| Your project inquiry has been received successfully`,
+      message: HireMeEmailTemplate({
+        fullName,
+        email,
+        projectType,
+        projectTitle,
+        budget,
+        description,
+        location,
+      }),
     });
 
     return res.status(201).json({
