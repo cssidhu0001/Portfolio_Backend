@@ -1,6 +1,5 @@
 const Contact = require("../Models/Contact");
 const axios = require("axios");
-// const { sendEmail } = require("../utils/sendEmail");
 const contactEmailTemplate = require("../Functions/contactMeTemplate");
 
 exports.sendMessage = async (req, res) => {

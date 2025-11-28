@@ -55,7 +55,7 @@ exports.createProjectRequest = async (req, res) => {
 
     return res.status(201).json({
       success: true,
-      message: "Project request submitted successfully!",
+      message: `🙏 Thank You, ${fullName}| Your project inquiry has been received successfully`,
       data: request,
     });
   } catch (err) {
