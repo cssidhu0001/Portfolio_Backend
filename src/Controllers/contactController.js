@@ -29,7 +29,7 @@ exports.sendMessage = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      message: "Message sent successfully!",
+      message: `✨ Thank You ${name}, for reaching me!! ✨`,
       data: newMessage,
     });
   } catch (error) {
